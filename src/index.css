@@ -120,3 +120,48 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+body.light {
+  background-color: #f8f9fa; /* Color de fondo claro */
+  color: #000; /* Color de texto oscuro */
+}
+
+
+body.light nav {
+  background-color: #f8f9fa; /* Color de fondo del nav en tema claro */
+  color: #000; /* Color de texto del nav en tema claro */
+}
+
+body.light a {
+  color: #000; /* Color de texto para los enlaces en tema claro */
+}
+
+body.light a:hover {
+  color: rgb(136, 136, 136); /* Color al pasar el mouse sobre los enlaces */
+}
+
+/* Estilos para el tema oscuro */
+body.dark {
+  background-color: #343a40; /* Color de fondo oscuro */
+  color: #fff; /* Color de texto claro */
+}
+
+body.dark nav {
+  background-color: #c324d1; /* Color de fondo del nav en tema oscuro */
+  color: #fff; /* Color de texto del nav en tema oscuro */
+}
+
+body.dark a {
+  color: #fff; /* Color de texto para los enlaces en tema oscuro */
+}
+
+body.dark a:hover {
+  color: rgb(206, 217, 142); /* Color al pasar el mouse sobre los enlaces en tema oscuro */
+}
+
+nav {
+  display: flex;
+  width: 80vw;
+  justify-content: flex-start;
+  padding: 1rem;
+}
