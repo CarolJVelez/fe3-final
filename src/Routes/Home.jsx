@@ -23,7 +23,7 @@ const Home = () => {
       <h1>Home</h1>
       <div className='card-grid'>
         {dentistas.map((dentista) => 
-          <Card key={dentista.id} name={dentista.name} username={dentista.username} id={dentista.id} />
+          <Card key={dentista.id}  dentista = {dentista} />
         )}
       </div>
     </main>

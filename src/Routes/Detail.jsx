@@ -10,9 +10,11 @@ const Detail = () => {
   const [dentista, setDentista] = useState({});
   const params = useParams();
   const url = "https://jsonplaceholder.typicode.com/users/" + params.id;
+  console.log(params);
 
   const traerDentista = async() => {
     const res = await axios(url)
+    console.log(res.data);
     setDentista(res.data);
   }
 
