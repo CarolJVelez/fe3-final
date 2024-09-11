@@ -12,11 +12,11 @@ import Favs from "./Routes/Favs";
 
 function App() {
 
-  const { theme } = useContext(ContextGlobal);
+  const { state } = useContext(ContextGlobal);
 
   useEffect(() => {
-    document.body.className = theme; // Cambia la clase del body
-  }, [theme]);
+    document.body.className = state.theme; 
+  }, [state.theme]);
 
   return (
       <div className="App">

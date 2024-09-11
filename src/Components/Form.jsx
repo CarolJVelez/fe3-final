@@ -39,7 +39,7 @@ const Form = () => {
   const reset = () => {
     setCustomer({
       name: "",
-      address: "",
+      email: "",
     });
   };
 
@@ -65,13 +65,11 @@ const Form = () => {
             <button>Enviar</button>
             <button onClick={reset}>Reset form</button>
           </form>
-
-          
         </>
       )}
 
       {error && (
-        <h4 style={{ color: "red" }}>Por favor, verifique su información</h4>
+        <h4 style={{ color: "red",textAlign: "center" }}>Por favor, verifique su información</h4>
       )}
     </>
   );

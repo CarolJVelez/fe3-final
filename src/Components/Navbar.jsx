@@ -7,11 +7,11 @@ import { routes } from "./utils/routes";
 
 const Navbar = () => {
 
-  const { theme, changeTheme } = useContext(ContextGlobal);
+  const {state, changeTheme } = useContext(ContextGlobal);
 
-  const themeIcon = theme === 'light' ? '🌙' : '☀️';
-  const buttonClass = theme === 'light' ? 'theme-button light' : 'theme-button dark';
-  const themeAlt = theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+  const themeIcon = state.theme === 'light' ? '🌙' : '☀️';
+  const buttonClass = state.theme === 'light' ? 'theme-button light' : 'theme-button dark';
+  const themeAlt = state.theme === 'light' ? 'Cambiar al modo oscuro' : 'Cambiar al modo claro';
 
   return (
     <nav>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <h4>Contact</h4>
           </Link>
           <Link to={routes.favs}>
-            <h4>Favoritos</h4>
+            <h4>Favs</h4>
           </Link>
         </div>
         <button onClick={changeTheme} className={buttonClass} aria-label={themeAlt}>

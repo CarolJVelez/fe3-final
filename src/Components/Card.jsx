@@ -4,17 +4,16 @@ import { routes } from "./utils/routes";
 import { useCharStates } from "../Components/utils/global.context";
 
 
-
 const Card = ({ id, dentista }) => {
-  const { setFavs } = useCharStates();
+  const { dispatch } = useCharStates();
   const addFav = () => {
-    setFavs((favs) => [...favs, dentista]);
+    dispatch({type: "ADD_FAV", payload: dentista});
     alert(`Dentista ${dentista.name} añadido a favoritos!`);
   };
 
   return (
     <div className="card">
-      <img style={{ width: "200px" }} src="/images/doctor.jpg" alt="dentista" />
+      <img style={{ width: "300px", borderRadius: "5px" }} src="/images/doctor.jpg" alt="dentista" />
       <Link to={routes.detail + dentista.id}>
         <h3>{dentista.name}</h3>
       </Link>

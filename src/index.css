@@ -13,13 +13,20 @@ code {
 }
 
 .favButton {
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: #8cb5c9;
   padding: 10px;
-  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
 }
 
 h1 {
+  text-align: center;
+}
+
+h2, p{
   text-align: center;
 }
 
@@ -38,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(136, 136, 136);
+  color: rgb(243, 206, 84);
 }
 
 nav button {
@@ -61,18 +68,23 @@ footer {
 
 /* Estilos para el tema oscuro */
 body.dark footer {
-  background-color: #343a40; /* Fondo oscuro */
+  background-color: #343a40;
+  padding: 1rem;  /* Fondo oscuro */
 }
 
 body.dark .footer-left {
   background-color: #343a40; /* Fondo oscuro */
   color: #fff; /* Texto blanco */
-  padding: 1rem; /* Añade padding para que se vea bien */
+}
+
+body.dark .footer-left img  {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(5765%) hue-rotate(19deg) brightness(99%) contrast(106%);
 }
 
 /* Estilos para el tema claro */
 body.light footer {
-  background-color: #dddfe0; /* Fondo claro */
+  background-color: #dddfe0;
+  padding: 1rem; /* Fondo claro */
 }
 
 body.light .footer-left {
@@ -102,19 +114,44 @@ body.light .footer-left {
   align-items: center;
 }
 
+
 .social-icon {
   width: 24px; /* Ajusta el tamaño del icono de Facebook */
   margin-left: 1rem; /* Espacio entre iconos si agregas más en el futuro */
 }
 
+.social-icon:hover {
+  border: 0.5px solid rgb(243, 206, 84);
+}
+
+body.light .social-icon {
+  width: 24px; /* Ajusta el tamaño del icono de Facebook */
+  margin-left: 1rem; /* Espacio entre iconos si agregas más en el futuro */
+  filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(7492%) hue-rotate(330deg) brightness(107%) contrast(94%);
+}
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
-  margin: 0 auto;
+  height: 200px;
+  margin: auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  padding: 5px;
+}
+
+form button {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #8cb5c9;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .card {
@@ -122,20 +159,22 @@ form {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 300px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 5px;
 }
 
 .card:hover {
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(243, 206, 84);
 }
 
 .card-grid {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  width: 90vw;
+  width: 70vw;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -151,9 +190,10 @@ form {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: 90%;
   display: table;
   border: 1px solid #ccc;
+  margin-left: 80px;
 }
 
 td, th {
@@ -190,7 +230,7 @@ body.light a {
 }
 
 body.light a:hover {
-  color: rgb(136, 136, 136);
+  color: rgb(243, 206, 84);
 }
 
 body.dark {
@@ -208,7 +248,7 @@ body.dark a {
 }
 
 body.dark a:hover {
-  color: rgb(206, 217, 142);
+  color: rgb(243, 206, 84);
 }
 
 nav {
@@ -223,6 +263,10 @@ nav {
 
 .logo {
   width: 200px; /* Ajusta el tamaño del logo */
+}
+
+body.dark .logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(5765%) hue-rotate(19deg) brightness(99%) contrast(106%);
 }
 
 .nav-content {
@@ -242,7 +286,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--nav-link-hover-color, rgb(136, 136, 136)); /* Color al pasar el mouse sobre los enlaces */
+  color: var(--nav-link-hover-color, rgb(243, 206, 84)); /* Color al pasar el mouse sobre los enlaces */
 }
 
 nav .theme-button {
@@ -255,10 +299,12 @@ nav .theme-button {
 
 .theme-button.light {
   background-color: #000; /* Fondo blanco en tema claro */
+  border-radius: 5px;
   color: #fff; /* Color del emoticono negro en tema claro */
 }
 
 .theme-button.dark {
   background-color: #fff; /* Fondo negro en tema oscuro */
   color: #000; /* Color del emoticono blanco en tema oscuro */
+  border-radius: 5px;
 }
