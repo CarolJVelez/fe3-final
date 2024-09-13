@@ -41,6 +41,7 @@ const Form = () => {
       name: "",
       email: "",
     });
+    setError(false);
   };
 
   return (
